@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>Explore your favourite Beer Here!!!</h1>
+{%for beer in beermodel_list%}
+<h2><a href="/detail/{{beer.id}}">{{beer.name|title}}</a></h2>
+{%endfor%}
+<a href="/create" class="btn btn-lrg btn-primary">InsertAnotherBeerModelHere</a>
+{%endblock%}

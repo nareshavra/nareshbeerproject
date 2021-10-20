@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>{{object.name|upper}} Information</h1>
+<h2>Country Of Origin:{{object.coo|upper}}</h2>
+<h2>Price:{{object.price}}</h2>
+<h2>Taste:{{object.taste|title}}</h2>
+<h2>POA:{{object.poa}}</h2>
+
+<a href="/update/{{object.id}}" class="btn btn-primary">updatehere</a>
+<a href="/delete/{{object.id}}" class="btn btn-primary">delete</a>
+
+{%endblock%}
